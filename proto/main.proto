@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package main;
+
+message StarBLEMessage {
+  enum Type {
+    UNDEFINED = 0;
+    DEVICE_INIT = 1;
+    RABBIT_HOLE = 2;
+    DEEPLINK = 3;
+  }
+
+  Type type = 1;
+  bytes data = 2;
+}
